@@ -1,4 +1,4 @@
-#Personal Blog
+# Personal Blog
 Welcome to the repository for my personal blog! This project serves as the backend and frontend of a simple blogging platform. The blog consists of two primary sections: the Guest Section and the Admin Section. Below is a breakdown of the structure and functionality of each section.
 
 Sections Overview
