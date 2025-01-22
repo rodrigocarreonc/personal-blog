@@ -14,46 +14,7 @@ $articles = $result->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .path {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .blog-container {
-            border: 2px solid #333;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .blog-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .article-list {
-            list-style: none;
-            padding: 0;
-        }
-        .article-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        .article-title {
-            color: #000;
-            text-decoration: none;
-        }
-        .article-title:hover {
-            text-decoration: underline;
-        }
-        .article-date {
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
     <div class="path">/home</div>
@@ -69,42 +30,6 @@ $articles = $result->fetchAll(PDO::FETCH_ASSOC);
                     <span class="article-date"><?php echo date('F j, Y', strtotime($article['date'])); ?></span>
                 </li>
             <?php endforeach; ?>
-            <li class="article-item">
-                <a href="article.html" class="article-title">My first article</a>
-                <span class="article-date">August 7, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Second article</a>
-                <span class="article-date">August 4, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Third article</a>
-                <span class="article-date">August 1, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Fourth article</a>
-                <span class="article-date">July 30, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Fifth article</a>
-                <span class="article-date">July 21, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Sixth article</a>
-                <span class="article-date">July 15, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Seventh article</a>
-                <span class="article-date">July 8, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Eighth article</a>
-                <span class="article-date">July 4, 2024</span>
-            </li>
-            <li class="article-item">
-                <a href="#" class="article-title">Nineth Article</a>
-                <span class="article-date">July 1, 2024</span>
-            </li>
         </ul>
     </div>
 </body>

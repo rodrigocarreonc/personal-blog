@@ -1,0 +1,48 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.path {
+    color: #333;
+    margin-bottom: 20px;
+}
+.form-container {
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+.form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-control:focus {
+    outline: none;
+    border-color: #666;
+}
+textarea.form-control {
+    min-height: 200px;
+    resize: vertical;
+}
+.submit-button {
+    background: none;
+    border: 2px solid #333;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background: #f0f0f0;
+}
