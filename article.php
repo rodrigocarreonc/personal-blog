@@ -1,9 +1,24 @@
+<?php
+require_once 'config/database.php';
+
+$_id = $_GET['id'];
+
+$database = new Database();
+$con = $database->connection();
+$query = "SELECT * FROM article WHERE article_id = $_id";
+$result = $con->prepare($query);
+$result->execute();
+$article = $result->fetch(PDO::FETCH_ASSOC);
+if(!$article){
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first article - Personal Blog</title>
+    <title><?php echo $article['title'];?></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,14 +50,11 @@
     </style>
 </head>
 <body>
-    <div class="path">/article/38</div>
     <div class="article-container">
-        <h1 class="article-title">My first article</h1>
-        <span class="article-date">August 7, 2024</span>
+        <h1 class="article-title"><?php echo $article['title'] ?></h1>
+        <span class="article-date"><?php echo date('F j, Y', strtotime($article['date'])) ?></span>
         <div class="article-content">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p><?php echo $article['content'] ?></p>
         </div>
     </div>
 </body>
