@@ -10,4 +10,10 @@ Frontend: HTML, CSS
 Backend: PHP
 Database: MySQL
 
+## Installing
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/articulos-app.git
+
 URL ROADMAP.SH IDEA: https://roadmap.sh/projects/personal-blog
