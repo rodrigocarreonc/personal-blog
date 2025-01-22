@@ -10,10 +10,42 @@ Frontend: HTML, CSS
 Backend: PHP
 Database: MySQL
 
-## Installing
-### 1. Clonar el repositorio
+## Prerequisites
+- **Xampp**
+- **MySQL Manager**
+- **PHP Intalled**
 
+## Installing
+### 1. Clone Repository in htdocs directory
 ```bash
 git clone https://github.com/tu-usuario/articulos-app.git
+```
+## 2.- Run SQL code in database manager
+
+```bash
+Create database personalBlog;
+use personalBlog;
+create table article(
+	article_id int primary key auto_increment,
+    title varchar(100) not null,
+    date varchar(10) not null,
+    content text not null,
+    created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp on update current_timestamp
+);
+create table users(
+	user_id int auto_increment primary key,
+    name varchar(100) not null,
+    username varchar(50) unique not null,
+    password varchar(255) not null,
+    created_at timestamp default current_timestamp,
+    updated_at timestamp default current_timestamp on update current_timestamp
+);
+insert into users(name,username,password) values ("Jhon Doe","admin","admin123");
+insert into article(title,date,content) values ("Welcome","01/22/2025","Hi! Welcome for my project");
+```
+
+## 3.-Start Server with xampp and go to the url project
+http://localhost/personal-blog/
 
 URL ROADMAP.SH IDEA: https://roadmap.sh/projects/personal-blog
