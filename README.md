@@ -18,7 +18,7 @@ Database: MySQL
 ## Installing
 ### 1. Clone Repository in htdocs directory
 ```bash
-git clone https://github.com/tu-usuario/articulos-app.git
+git clone https://github.com/rodrigocarreonc/personal-blog.git
 ```
 ## 2.- Run SQL code in database manager
 
